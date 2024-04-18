@@ -7,7 +7,7 @@ YOLOv8 Aimbot은 1인칭 슈팅 게임을 위한 AI 기반 조준 봇입니다. 
 >본인의 위험을 무릅쓰고 사용하세요, 차단될 수 있다는 보장은 없습니다!
 
 > [!참고] 
-> 이 애플리케이션은 엔비디아 그래픽 카드에서만 작동합니다. AMD 지원이 테스트 중입니다. [AI_enable_] 참조AMD](https://github.com/SunOner/yolov8_aimbot?tab=readme-ov-file#ai) 옵션.
+> 이 애플리케이션은 엔비디아 그래픽 카드에서만 작동합니다. AMD 지원이 테스트 중입니다.  옵션.
 > 시작과 보다 생산적이고 안정적인 운영을 위한 추천 그래픽 카드는 rtx 20 시리즈부터 시작합니다.
 
 ## 요구사항
@@ -17,7 +17,7 @@ YOLOv8 Aimbot은 1인칭 슈팅 게임을 위한 AI 기반 조준 봇입니다. 
 ### YOLOv8 Aimbot은 다음 환경에서 테스트되었습니다.
 <표>
   <thead><tr> safe Windows</th><td>10, 11(우선순위)</td></thead>
-  <thead><tr> safficles python:</th><td>3.11.6</td></tr></thead>
+ <thead><tr> saffiles python:</th><td>3.11.6</td></tr></thead>
   <thead><tr><th>CUDA:</th><td>12.4</td></tr></thead>
  <thead><tr>swalls텐서RT:</th><td>10.0</td></tr></thead>
  <thead><tr> "Ultralytics:</th><td>8.2</td></tr></thead>
