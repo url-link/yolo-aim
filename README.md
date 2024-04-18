@@ -1,162 +1,124 @@
-<div align="center">
+<div 일직선을 이루다="중심">
 
-# YOLOv8 Aimbot
-[![Python Version](https://img.shields.io/badge/Python-3.11.6-FFD43B?logo=python)](https://github.com/SunOner/yolov8_aimbot)
-[![License MIT](https://badgen.net/github/license/SunOner/yolov8_aimbot)](https://github.com/SunOner/yolov8_aimbot/blob/main/LICENSE)
-[![Github stars](https://img.shields.io/github/stars/SunOner/yolov8_aimbot?color=ffb500)](https://github.com/SunOner/yolov8_aimbot)
-[![Discord server](https://badgen.net/discord/online-members/sunone)](https://discord.gg/sunone)
-  <p>
-    <a href="https://github.com/SunOner/yolov8_aimbot/releases" target="_blank">
-      <img width="75%" src="https://raw.githubusercontent.com/SunOner/yolov8_aimbot/main/media/one.gif"></a>
-  </p>
-</div>
 
-## Overview
-YOLOv8 Aimbot is an AI-powered aim bot for first-person shooter games. It leverages the YOLOv8 model, PyTorch, and various other tools to automatically target and aim at enemies within the game. The AI model in repository has been trained on more than 25,000 images from popular first-person shooter games like Warface, Destiny 2, Battlefield 2042, CS:GO and CS2.
-> [!WARNING]
-> Use it at your own risk, we do not guarantee that you may be blocked!
+## 개요
+YOLOv8 Aimbot은 1인칭 슈팅 게임을 위한 AI 기반 조준 봇입니다. YOLOv8 모델인 PyTorch 및 기타 다양한 도구를 활용하여 게임 내 적을 자동으로 목표로 삼고 조준합니다. 저장소에 있는 AI 모델은 Warface, Destiny 2, Battlefield 2042, CS와 같은 인기 있는 1인칭 슈팅 게임의 25,000개 이상의 이미지에 대해 훈련되었습니다.GO와 CS2.
+> [!경고]
+>본인의 위험을 무릅쓰고 사용하세요, 차단될 수 있다는 보장은 없습니다!
 
-> [!NOTE] 
-> This application only works on Nvidia graphics cards. AMD support is testing. See [AI_enable_AMD](https://github.com/SunOner/yolov8_aimbot?tab=readme-ov-file#ai) option.
-> The recommended graphics card for starting and more productive and stable operation starts with the rtx 20 series.
+> [!참고] 
+> 이 애플리케이션은 엔비디아 그래픽 카드에서만 작동합니다. AMD 지원이 테스트 중입니다. [AI_enable_] 참조AMD](https://github.com/SunOner/yolov8_aimbot?tab=readme-ov-file#ai) 옵션.
+> 시작과 보다 생산적이고 안정적인 운영을 위한 추천 그래픽 카드는 rtx 20 시리즈부터 시작합니다.
 
-## Requirements
-Before you get started, make sure you have the following prerequisites installed and pay attention to the versions in [Tested Environment](https://github.com/SunOner/yolov8_aimbot?tab=readme-ov-file#tested-environment) block, this may cause errors in launching the aimbot.
+## 요구사항
+- 모든 설치 후 에임봇을 시작하려면 'py run.py ' 또는 'py launcher.py '를 입력하여 GUI 설정을 엽니다.
 
-- Information in English:
-  - [Auto-Install guide](https://github.com/SunOner/yolov8_aimbot/blob/main/docs/en/helper_en.md)
-  - [Self install guide](https://github.com/SunOner/yolov8_aimbot/blob/main/docs/en/install_guide_en.md)
-  - [Questions and answers](https://github.com/SunOner/yolov8_aimbot/blob/main/docs/en/questions_en.md)
-  - [Arduino setup](https://github.com/SunOner/HID_Arduino)
-  - [Discord server](https://discord.gg/sunone)
-<br></br>
-- Информация на Русском языке:
-  - [Инструкция по автоматической установке](https://github.com/SunOner/yolov8_aimbot/blob/main/docs/ru/helper_ru.md)
-  - [Инструкция по установке в ручную](https://github.com/SunOner/yolov8_aimbot/blob/main/docs/ru/install_guide_ru.md)
-  - [Вопросы и ответы](https://github.com/SunOner/yolov8_aimbot/blob/main/docs/ru/questions_ru.md)
-  - [Установка ардуино](https://github.com/SunOner/HID_Arduino)
-  - [Discord сервер](https://discord.gg/sunone)
-<br></br>
-- To launch the aimbot after all installations, type `py run.py` or `py launcher.py` to open gui settings.
-
-## Tested Environment
-### The YOLOv8 Aimbot has been tested on the following environment:
-<table>
-  <thead><tr><th>Windows</th><td>10 and 11(priority)</td></thead>
-  <thead><tr><th>Python:</th><td>3.11.6</td></tr></thead>
+## 테스트 환경
+### YOLOv8 Aimbot은 다음 환경에서 테스트되었습니다.
+<표>
+  <thead><tr> safe Windows</th><td>10, 11(우선순위)</td></thead>
+  <thead><tr> safficles python:</th><td>3.11.6</td></tr></thead>
   <thead><tr><th>CUDA:</th><td>12.4</td></tr></thead>
-  <thead><tr><th>TensorRT:</th><td>10.0</td></tr></thead>
-  <thead><tr><th>Ultralytics:</th><td>8.2</td></tr></thead>
-  <thead><tr><th>Boosty AI Model:</th><td>0.5.2</td></tr></thead>
-</table>
+ <thead><tr>swalls텐서RT:</th><td>10.0</td></tr></thead>
+ <thead><tr> "Ultralytics:</th><td>8.2</td></tr></thead>
+  <thead><tr> saughter Boosty AI 모델:</th><td>0.5.2</td></tr></thead>
+</표>
 
-## Options
-The behavior of the aim bot can be configured via the [`config.ini`](https://github.com/SunOner/yolov8_aimbot/blob/main/config.ini) file. Here are the available options:
+## 옵션
+Aim bot의 동작은 [`config]를 통해 구성할 수 있습니다.
 
-### Object Search window resolution:
-- detection_window_width `int`: Horizontal resolution of the object search window.
-- detection_window_height `int`: Vertical resolution of the object search window.
+### 개체 검색 창 해상도:
+- detection_window_폭 'int': 개체 검색 창의 수평 해상도입니다.
+- detection_window_height 'int': 개체 검색 창의 수직 해상도입니다.
 
-### Bettercam capture method:
-- Bettercam_capture `bool`: Use [Bettercam](https://github.com/RootKit-Org/BetterCam) to capture images from the screen.
-- bettercam_capture_fps `int`: Specific fps value for screen capture.
-- bettercam_monitor_id `int`: Id of the monitor from which the images will be captured.
-- bettercam_gpu_id `int`: Id of the GPU to be used for image capture
 
-### Obs capture method:
-- Obs_capture `bool`: Use [Obs](https://github.com/obsproject/obs-studio) to capture images from the screen.
-- Obs_camera_id `str` or `int`: `auto` or number of Virtual Camera ID.
-- Obs_capture_fps `int`: Specific fps value for screen capture.
+### 목표:
+-body_y_offset 'float': 헤드가 감지되지 않을 경우 본체 감지 상자 내부의 y 좌표를 보정할 수 있습니다.
+-hideout_targets 'bool': 범위의 표적(예: 다각형의 워페이스 또는 조준랩)을 사격할 수 있습니다.
+-disable_headshot 'bool': 헤드 타겟팅을 비활성화합니다.
 
-### Aim:
-- body_y_offset `float`: Allows correction of y coordinates inside the body detected box if head is not detected.
-- hideout_targets `bool`: Allows shooting at targets on the range (for example in warface on the polygon or in aimlabs).
-- disable_headshot `bool`: Disable head targerting.
+### 단축키:
+-hotkey_targeting 'str': 목표물을 조준합니다. 예를 들어 'hotkey_targeting = RightMouseButton, X2MouseButton'과 같은 멀티 키를 지원합니다.
+-hotkey_exit 'str': Exit.
+-hotkey_pause 'str': AIM을 일시 중지합니다.
+-hotkey_reload_config 'str': 다시 로드 구성.
 
-### Hot keys:
-- The names of all the keys are [here](https://github.com/SunOner/yolov8_aimbot/blob/main/logic/buttons.py). Type `None` is empty button.
-- hotkey_targeting `str`: Aiming at the target. Supports multi keys, for example `hotkey_targeting = RightMouseButton,X2MouseButton`
-- hotkey_exit `str`: Exit.
-- hotkey_pause `str`: Pause AIM.
-- hotkey_reload_config `str`: Reload config.
+### 마우스:
+-mouse_dpi 'int': 마우스 DPI.
+-mouse_sensitivity 'float': 조준 감도.
+-mouse_fov_width 'int': 게임 내 시야각의 현재 수평 값입니다.
+-mouse_fov_높이 'int': 게임 내 시야각의 현재 수직 값입니다.
+-mouse_lock_target 'bool': True: 한 번 누르면 영구적으로 목표물을 조준할 수 있고, 다시 누르면 조준이 꺼집니다. 거짓: 버튼을 눌러 지속적으로 목표물을 조준합니다.
+-mouse_auto_aim 'bool': 자동 타깃팅.
+-마우스_ghub 'bool': 마우스 이동에 로지텍 GHUB 이용을 사용합니다. 값이 False이면 Native win32 라이브러리가 이동에 사용됩니다.
 
-### Mouse:
-- mouse_dpi `int`: Mouse DPI.
-- mouse_sensitivity  `float`: Aim sensitivity.
-- mouse_fov_width  `int`: The current horizontal value of the viewing angle in the game.
-- mouse_fov_height  `int`: The current vertical value of the viewing angle in the game.
-- mouse_lock_target `bool`: True: Press once to permanently aim at the target, press again to turn off the aiming. False: Hold down the button to constantly aim at the target.
-- mouse_auto_aim `bool`: Automatic targeting.
-- mouse_ghub `bool`: Uses Logitech GHUB exploit for mouse movement. If the value is False, native win32 library is used for movement.
+### 촬영:
+-auto_shoot 'bool': 자동 촬영.
+-트리거봇 'bool': 대상이 범위에 있으면 자동으로 대상을 촬영하고 'mouse_auto_shoot' 옵션을 활성화해야 하며 조준도 자동으로 꺼집니다.
+-force_bool을 클릭합니다. 조준경이 물체 내에 위치하지 않더라도 촬영이 수행됩니다.
 
-### Shooting:
-- auto_shoot `bool`: Automatic shooting. (For some games need [arduino](https://github.com/SunOner/HID_Arduino)).
-- triggerbot `bool`: Automatic shooting at a target if it is in the scope, requires the `mouse_auto_shoot` option enabled, and aiming will also be automatically turned off.
-- force_click `bool`: Shooting will be performed even if the sight is not located within the object.
-
-### Arduino:
-- arduino_move `bool`: Sends a command to the arduino to move the mouse.
-- arduino_shoot `bool`: Sends a command to the arduino to fire with the mouse.
-- arduino_port `str`: Arduino COM port. Use `COM1` or `COM2` ... or `auto`.
-- arduino_baudrate `int`: Custom Arduino baudrate.
-- arduino_16_bit_mouse `bool`: Send 16 bit data to the arduino port to move the mouse.
+### 아두이노:
+-arduino_move 'bool': 마우스를 움직이도록 명령을 arduino에게 보냅니다.
+-arduino_shoot 'bool': 마우스로 발사하라는 명령을 arduino에게 보냅니다.
+-arduino_port 'str': 아두이노 COM port. COM1 또는 COM2를 사용합니다... 또는 auto.
+-arduino_baudrate 'int': 사용자 정의 아두이노 보레이트.
+-arduino_16_bit_mouse 'bool': 16비트 데이터를 arduino 포트로 전송하여 마우스를 이동시킵니다.
 
 ### AI:
-- AI_model_name `str`: AI model name.
-- AI_model_image_size `int`: AI model image size.
-- AI_conf `float`: How many percent is AI sure that this is the right goal.
-- AI_device `int` or `str`: Device to run on, `0`, `1`... or `cpu`.
-- AI_enable_AMD `bool`: Enable support Amd GPUs. Install ROCm, [Zluda](https://github.com/vosen/ZLUDA) and PyTorch. See [AMD docs](https://rocm.docs.amd.com/projects/install-on-windows/en/latest/how-to/install.html).
-- AI_mouse_net `bool`: Use a neural network to calculate mouse movements. See [this repository](https://github.com/SunOner/mouse_net).
+-AI_model_name 'str' : AI 모델명
+-AI_model_image_size 'int' : AI 모델 이미지 크기
+-AI_conf 'float': 몇 %의 AI가 이것이 올바른 목표라고 확신합니까?
+-AI_device 'int' 또는 'str': 실행할 디바이스, '0', '1'... 또는 'cpu'.
+-AI_enable_AMD 'bool': AMD GPU를 지원합니다. ROCm, [Zluda](https://github.com/vosen/ZLUDA) 및 PyTorch를 설치합니다. [AMD docs](https://rocm.docs.amd.com/projects/install-on-windows/en/latest/how-to/install.html) 참조.
+-AI_mouse_net 'bool': 신경망을 사용하여 마우스 움직임을 계산합니다.
 
-### Debug window:
-- show_window `bool`: Shows the OpenCV2 window for visual feedback.
-- show_detection_speed `bool`: Displays speed information inside the debug window.
-- show_window_fps `bool`: Displays FPS in the corner.
-- show_boxes `bool`: Displays detectable objects.
-- show_labels `bool`: Displays the name of the detected object.
-- show_conf `bool`: Displays object confidence threshold for detection.
-- show_target_line `bool`: Shows the mouse finishing line.
-- show_target_prediction_line `bool`: Show mouse prediction line.
-- debug_window_always_on_top `bool`: The debug window will always be on top of other windows.
-- spawn_window_pos_x `int`: When the debugging window starts, it takes the x position.
-- spawn_window_pos_y `int`: When the debugging window starts, it takes the y position.
-- debug_window_scale_percent `int`: Adjusts the size of the debug window.
-- The names of the debugging window can be written in the file window_names.txt they will be randomly selected.
+### 디버그 창:
+-show_window 'bool': 시각적 피드백을 위해 OpenCV2 창을 표시합니다.
+-show_detection_speed 'bool': 디버그 창 내부의 속도 정보를 표시합니다.
+-show_window_fps 'bool': 모서리에 FPS를 표시합니다.
+-show_box 'bool': 탐지 가능한 개체를 표시합니다.
+-show_lables 'bool': 탐지된 개체의 이름을 표시합니다.
+-show_conf 'bool': 검출을 위한 객체 신뢰 임계값을 표시합니다.
+-show_target_line 'bool': 마우스 피니시 라인을 표시합니다.
+-show_target_prediction_line 'bool': 마우스 예측 라인을 표시합니다.
+-debug_window_always_on_top 'bool': 디버그 창은 항상 다른 창 위에 있습니다.
+-spron_window_pos_x 'int': 디버깅 창이 시작되면 x 위치가 됩니다.
+-spron_window_pos_y 'int': 디버깅 창이 시작되면 y 위치가 표시됩니다.
+-debug_window_scale_퍼센트 'int': 디버그 창의 크기를 조정합니다.
+-디버깅 창의 이름은 window_name 파일에 쓸 수 있습니다.txt 그들은 무작위로 선택될 것입니다.
 
-## AI Models
-- *.pt: Default AI model.
-- *.onnx: The model is optimized to run on processors.
-- *.engine: Final exported model, which is faster than the previous two.
+## AI 모델
+-*.pt: 기본 AI 모델.
+-*.onnx: 이 모델은 프로세서에서 실행되도록 최적화되어 있습니다.
+-*.엔진: 앞의 두 가지 모델보다 빠른 최종 수출 모델입니다.
 
-## Export .pt model to .engine
-1. All commands are executed in the console window:
-2. First, go to the aimbot directory using the command:
-```cmd
+## .pt 모델을 .engine으로 내보내기
+1.콘솔 창에서 모든 명령이 실행됩니다.
+2.먼저 다음 명령을 사용하여 aimbot 디렉토리로 이동합니다.
+'''cmd
 cd C:\Users\your_username\downloads\yolov8_aimbot-main
 ```
-3. Then export the model from the .pt format in .engine format.
-```cmd
-yolo export model="models/sunxds_0.4.1.pt" format=engine device=0 imgsz=480 half=True
+3.그런 다음 .pt 형식에서 .engine 형식으로 모델을 내보냅니다.
+'''cmd
+yolo 내보내기 모델="models/sunxds_0.4.1.pt " 형식=엔진 장치=0 imgsz=480 half=True
 ```
-  - `model="model_path/model_name.pt"`: Path to model.
-  - `format=engine`: TensorRT model format.
-  - `half=true`: Use Half-precision floating-point format.
-  - `device=0`: GPU id.
-  - `workspace=8`: GPU max video memory.
-  - `verbose=False`: Debug stuff. Convenient function, can show errors when exporting.
+ -"model="model_path/model_name.pt": path to model.
+ -'format=engine': 텐서RT 모델 형식.
+ -'half=true': 반정밀 부동 소수점 형식을 사용합니다.
+ -'device=0': GPU id.
+ -'workspace=8': GPU max video memory.
+ -"verbose=false": 디버그 내용. 편리한 기능, 내보내기 시 오류를 나타낼 수 있습니다.
 
-## Notes / Recommendations
-- Limit the maximum value of frames per second in the game in which you will use it. And also do not set the screen resolution to high. Do not overload the graphics card.
-- Do not set high graphics settings in games.
-- Limit the browser (try not to watch YouTube while playing and working AI at the same time, for example (of course if you don't have a super duper graphics card)) and so on, which loads the video card.
-- Try to use TensorRT for acceleration. `.pt` model is good, but does not have as much speed as `.engine`.
-- Turn off the cv2 debug window, this saves system resources.
-- Do not increase the object search window resolution, this may affect your search speed.
-- If you have started the application and nothing happens, it may be working, close it with the F2 key and change the `show_window` option to `True` in the file [config.ini](https://github.com/SunOner/yolov8_aimbot/blob/main/config.ini) to make sure that the application is working.
+## 참고 사항 / 권장 사항
+-사용할 게임에서 초당 프레임의 최대 값을 제한합니다. 또한 화면 해상도를 높게 설정하지 마십시오. 그래픽 카드에 과부하가 걸리지 않도록 합니다.
+-게임에서 높은 그래픽 설정을 설정하지 마십시오.
+-비디오 카드를 로드하는 브라우저를 제한합니다(예를 들어 (물론 슈퍼 슈퍼 그래픽 카드가 없는 경우).
+-텐서를 사용해 보십시오.가속을 위한 RT. .pt 모델은 좋지만 엔진만큼 속도가 빠르지는 않습니다.
+-cv2 디버그 창을 끄면 시스템 리소스가 절약됩니다.
+-개체 검색 창 해상도를 높이지 마십시오. 검색 속도에 영향을 줄 수 있습니다.
+-응용 프로그램을 시작했는데 아무 일도 일어나지 않으면 응용 프로그램이 작동하고 있을 수 있습니다. F2 키로 닫고 파일에서 'show_window' 옵션을 'True'로 변경하여 응용 프로그램이 작동하는지 확인합니다.
 
-## Support the project
-I will post new models [here](https://boosty.to/sunone).
+## 프로젝트 지원
 
-## License
-This project is licensed under the MIT License. See **[LICENSE](https://github.com/SunOner/yolov8_aimbot/blob/main/LICENSE)** for details
+
+## 면허증.
